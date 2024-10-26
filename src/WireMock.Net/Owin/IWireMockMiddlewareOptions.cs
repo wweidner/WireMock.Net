@@ -1,5 +1,3 @@
-// Copyright © WireMock.Net
-
 using System;
 using System.Collections.Concurrent;
 using WireMock.Handlers;
@@ -81,4 +79,6 @@ internal interface IWireMockMiddlewareOptions
     QueryParameterMultipleValueSupport? QueryParameterMultipleValueSupport { get; set; }
 
     public bool ProxyAll { get; set; }
+
+    IMessageParser CustomMessageParser { get; set; }
 }

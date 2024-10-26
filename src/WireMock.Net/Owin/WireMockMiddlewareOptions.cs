@@ -1,5 +1,3 @@
-// Copyright © WireMock.Net
-
 using System;
 using System.Collections.Concurrent;
 using WireMock.Handlers;
@@ -100,4 +98,7 @@ internal class WireMockMiddlewareOptions : IWireMockMiddlewareOptions
 
     /// <inheritdoc />
     public bool ProxyAll { get; set; }
+
+    /// <inheritdoc />
+    public IMessageParser CustomMessageParser { get; set; }
 }

@@ -1,5 +1,3 @@
-// Copyright © WireMock.Net
-
 using System;
 using System.Threading.Tasks;
 using Stef.Validation;
@@ -83,6 +81,9 @@ public class Mapping : IMapping
 
     /// <inheritdoc />
     public IdOrText? ProtoDefinition { get; private set; }
+
+    /// <inheritdoc />
+    public IMessageParser? CustomMessageParser { get; private set; }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="Mapping"/> class.
@@ -192,6 +193,13 @@ public class Mapping : IMapping
     public IMapping WithProtoDefinition(IdOrText protoDefinition)
     {
         ProtoDefinition = protoDefinition;
+        return this;
+    }
+
+    /// <inheritdoc />
+    public IMapping WithCustomMessageParser(IMessageParser customMessageParser)
+    {
+        CustomMessageParser = customMessageParser;
         return this;
     }
 }

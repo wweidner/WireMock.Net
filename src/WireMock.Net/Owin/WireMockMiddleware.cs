@@ -1,5 +1,3 @@
-// Copyright © WireMock.Net
-
 using System;
 using System.Threading.Tasks;
 using System.Linq;
