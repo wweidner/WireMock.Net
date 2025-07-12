@@ -1,8 +1,8 @@
 // Copyright © WireMock.Net
 
 using System;
-using MimeKit;
 using WireMock.Matchers.Helpers;
+using WireMock.Models.Mime;
 using WireMock.Util;
 
 namespace WireMock.Matchers;
@@ -12,7 +12,7 @@ namespace WireMock.Matchers;
 /// </summary>
 public class MimePartMatcher : IMimePartMatcher
 {
-    private readonly Func<MimePart, MatchResult>[] _funcs;
+    private readonly Func<IMimePartData, MatchResult>[] _funcs;
 
     /// <inheritdoc />
     public string Name => nameof(MimePartMatcher);
@@ -52,21 +52,21 @@ public class MimePartMatcher : IMimePartMatcher
         _funcs =
         [
             mp => ContentTypeMatcher?.IsMatch(GetContentTypeAsString(mp.ContentType)) ?? MatchScores.Perfect,
-            mp => ContentDispositionMatcher?.IsMatch(mp.ContentDisposition.ToString().Replace("Content-Disposition: ", string.Empty)) ?? MatchScores.Perfect,
-            mp => ContentTransferEncodingMatcher?.IsMatch(mp.ContentTransferEncoding.ToString().ToLowerInvariant()) ?? MatchScores.Perfect,
+            mp => ContentDispositionMatcher?.IsMatch(mp.ContentDisposition?.ToString()?.Replace("Content-Disposition: ", string.Empty)) ?? MatchScores.Perfect,
+            mp => ContentTransferEncodingMatcher?.IsMatch(mp.ContentTransferEncoding.ToLowerInvariant()) ?? MatchScores.Perfect,
             MatchOnContent
         ];
     }
 
     /// <inheritdoc />
-    public MatchResult IsMatch(object value)
+    public MatchResult IsMatch(IMimePartData value)
     {
         var score = MatchScores.Mismatch;
         Exception? exception = null;
 
         try
         {
-            if (value is MimePart mimePart && Array.TrueForAll(_funcs, func => func(mimePart).IsPerfect()))
+            if (Array.TrueForAll(_funcs, func => func(value).IsPerfect()))
             {
                 score = MatchScores.Perfect;
             }
@@ -85,7 +85,7 @@ public class MimePartMatcher : IMimePartMatcher
         return "NotImplemented";
     }
 
-    private MatchResult MatchOnContent(MimePart mimePart)
+    private MatchResult MatchOnContent(IMimePartData mimePart)
     {
         if (ContentMatcher == null)
         {
@@ -94,10 +94,10 @@ public class MimePartMatcher : IMimePartMatcher
 
         var bodyParserSettings = new BodyParserSettings
         {
-            Stream = mimePart.Content.Open(),
+            Stream = mimePart.Open(),
             ContentType = GetContentTypeAsString(mimePart.ContentType),
             DeserializeJson = true,
-            ContentEncoding = null, // mimePart.ContentType.CharsetEncoding.ToString(),
+            ContentEncoding = null, // mimePart.ContentType?.CharsetEncoding.ToString(),
             DecompressGZipAndDeflate = true
         };
 
@@ -105,8 +105,8 @@ public class MimePartMatcher : IMimePartMatcher
         return BodyDataMatchScoreCalculator.CalculateMatchScore(bodyData, ContentMatcher);
     }
 
-    private static string? GetContentTypeAsString(ContentType? contentType)
+    private static string? GetContentTypeAsString(IContentTypeData? contentType)
     {
-        return contentType?.ToString().Replace("Content-Type: ", string.Empty);
+        return contentType?.ToString()?.Replace("Content-Type: ", string.Empty);
     }
 }
