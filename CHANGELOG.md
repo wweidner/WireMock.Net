@@ -1,3 +1,9 @@
+# 1.8.14 (13 July 2025)
+- [#1325](https://github.com/wiremock/WireMock.Net/pull/1325) - Add method CreateHttpClientFactory [feature] contributed by [StefH](https://github.com/StefH)
+- [#1326](https://github.com/wiremock/WireMock.Net/pull/1326) - Implement IMimeMessageData [feature] contributed by [StefH](https://github.com/StefH)
+- [#1329](https://github.com/wiremock/WireMock.Net/pull/1329) - Fix HandlebarsContext.ParseAndEvaluate [bug] contributed by [StefH](https://github.com/StefH)
+- [#1327](https://github.com/wiremock/WireMock.Net/issues/1327) - Response Body Does Not Evaluate Multiple Handlebars Templates [bug]
+
 # 1.8.13 (23 June 2025)
 - [#1322](https://github.com/wiremock/WireMock.Net/pull/1322) - Add Scenario set State method [feature] contributed by [StefH](https://github.com/StefH)
 - [#1321](https://github.com/wiremock/WireMock.Net/issues/1321) - Feature: Setting individual scenario state via Admin API [feature]
