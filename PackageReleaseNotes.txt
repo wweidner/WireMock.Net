@@ -1,7 +1,5 @@
 # 1.8.18 (04 August 2025)
-- #1337 Make CSharpCodeMatcher public [bug]
 - #1339 Fixes an issue with matching JSON bodies as bytes [bug]
-- #1336 Is CSharpCodeMatcher actually usable? [bug]
 - #1338 Specifying .WithBody(byte[]) fails to match for JSON bodies [bug]
 
 The full release notes can be found here: https://github.com/wiremock/WireMock.Net/blob/master/CHANGELOG.md
