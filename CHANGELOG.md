@@ -1,3 +1,7 @@
+# 1.10.0 (18 August 2025)
+- [#1344](https://github.com/wiremock/WireMock.Net/pull/1344) - Add new package WireMock.Net.Extensions.Routing which provides minimal-API-style routing for WireMock.Net [feature] contributed by [GennadyGS](https://github.com/GennadyGS)
+- [#1340](https://github.com/wiremock/WireMock.Net/issues/1340) - Feature Request: Add minimal-API-style routing as Extension Package [feature]
+
 # 1.9.1 (17 August 2025)
 - [#1345](https://github.com/wiremock/WireMock.Net/pull/1345) - Add TimesInSameState to MappingModel [feature] contributed by [StefH](https://github.com/StefH)
 - [#1347](https://github.com/wiremock/WireMock.Net/pull/1347) - Fix generating source code for Scenario and State [bug] contributed by [StefH](https://github.com/StefH)

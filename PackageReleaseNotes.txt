@@ -1,7 +1,5 @@
-# 1.9.1 (17 August 2025)
-- #1345 Add TimesInSameState to MappingModel [feature]
-- #1347 Fix generating source code for Scenario and State [bug]
-- #1343 MappingModel allows to configure the times for WillSetStateTo [feature]
-- #1346 Mapping: generated C# code is missing InScenario and WillSetStateTo [bug]
+# 1.10.0 (18 August 2025)
+- #1344 Add new package WireMock.Net.Extensions.Routing which provides minimal-API-style routing for WireMock.Net [feature]
+- #1340 Feature Request: Add minimal-API-style routing as Extension Package [feature]
 
 The full release notes can be found here: https://github.com/wiremock/WireMock.Net/blob/master/CHANGELOG.md
