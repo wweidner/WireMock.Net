@@ -1,3 +1,7 @@
+# 1.10.1 (22 August 2025)
+- [#1349](https://github.com/wiremock/WireMock.Net/pull/1349) - Add AtPath and AtAbsolutePath to Assertions projects [feature] contributed by [StefH](https://github.com/StefH)
+- [#1348](https://github.com/wiremock/WireMock.Net/issues/1348) - Support AtPath and AtAbsolutePath in WireMockAssertions [feature]
+
 # 1.10.0 (18 August 2025)
 - [#1344](https://github.com/wiremock/WireMock.Net/pull/1344) - Add new package WireMock.Net.Extensions.Routing which provides minimal-API-style routing for WireMock.Net [feature] contributed by [GennadyGS](https://github.com/GennadyGS)
 - [#1340](https://github.com/wiremock/WireMock.Net/issues/1340) - Feature Request: Add minimal-API-style routing as Extension Package [feature]
