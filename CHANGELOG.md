@@ -1,3 +1,6 @@
+# 1.11.0 (26 August 2025)
+- [#1350](https://github.com/wiremock/WireMock.Net/pull/1350) - Create WireMock.Net.ProtoBuf project [feature] contributed by [StefH](https://github.com/StefH)
+
 # 1.10.1 (22 August 2025)
 - [#1349](https://github.com/wiremock/WireMock.Net/pull/1349) - Add AtPath and AtAbsolutePath to Assertions projects [feature] contributed by [StefH](https://github.com/StefH)
 - [#1348](https://github.com/wiremock/WireMock.Net/issues/1348) - Support AtPath and AtAbsolutePath in WireMockAssertions [feature]

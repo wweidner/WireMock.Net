@@ -1,5 +1,4 @@
-# 1.10.1 (22 August 2025)
-- #1349 Add AtPath and AtAbsolutePath to Assertions projects [feature]
-- #1348 Support AtPath and AtAbsolutePath in WireMockAssertions [feature]
+# 1.11.0 (26 August 2025)
+- #1350 Create WireMock.Net.ProtoBuf project [feature]
 
 The full release notes can be found here: https://github.com/wiremock/WireMock.Net/blob/master/CHANGELOG.md
