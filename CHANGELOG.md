@@ -1,3 +1,8 @@
+# 1.11.1 (27 August 2025)
+- [#1352](https://github.com/wiremock/WireMock.Net/pull/1352) - Add additional try-catch to TypeLoader logic [feature] contributed by [StefH](https://github.com/StefH)
+- [#1354](https://github.com/wiremock/WireMock.Net/pull/1354) - Add System.Net.Http again to solve CVE warning [bug] contributed by [StefH](https://github.com/StefH)
+- [#1071](https://github.com/wiremock/WireMock.Net/issues/1071) - Split WireMock into multiple nuget packages depending on features [feature]
+
 # 1.11.0 (26 August 2025)
 - [#1350](https://github.com/wiremock/WireMock.Net/pull/1350) - Create WireMock.Net.ProtoBuf project [feature] contributed by [StefH](https://github.com/StefH)
 
