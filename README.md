@@ -3,13 +3,7 @@ A C# .NET version based on [mock4net](https://github.com/alexvictoor/mock4net) w
 
 ---
 
-<table>
-<tr>
-<td>
-:books: <strong>Full documentation at <a href="https://wiremock.org/dotnet/" title="WireMock.Net docs">wiremock.org</a>
-</td>
-</tr>
-</table>
+:books: <strong>Full documentation can now be found at <a href="https://wiremock.org/dotnet/" title="WireMock.Net docs">wiremock.org</a>
 
 ---
 
